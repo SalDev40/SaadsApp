@@ -1,0 +1,17 @@
+{
+  "name": "azure-migration",
+  "productName": "azure migration tool",
+  "version": "1.0.0",
+  "description": "Azure Migration Tool",
+  "main": "./main.prod.js",
+  "author": {
+    "name": "Azure Migration",
+    "email": "test@gmail.com"
+  },
+  "scripts": {
+    "electron-rebuild": "node -r ../internals/scripts/BabelRegister.js ../internals/scripts/ElectronRebuild.js",
+    "postinstall": "yarn electron-rebuild"
+  },
+  "license": "copyright",
+  "dependencies": {}
+}
