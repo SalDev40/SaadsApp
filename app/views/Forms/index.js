@@ -2,7 +2,7 @@
 import React from "react";
 import { Box, Container, makeStyles } from "@material-ui/core";
 import Page from "../../components/Page";
-import Profiles from "./ProfilesDefaultView/ProfilesDefView";
+import Form from "./ProfileDefForm";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,10 +18,10 @@ function FormsView() {
     <Page className={classes.root} title="Forms">
       <Container maxWidth={false}>
         <Box pt={1.2} />
-        <Profiles />
+        <Form />
       </Container>
     </Page>
   );
 }
 
-export default ProfilesDefaultView;
+export default FormsView;

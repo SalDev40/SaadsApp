@@ -3,7 +3,7 @@ import { Switch, Redirect, Route } from "react-router-dom";
 import Layout from "./views/Layout";
 import SettingsView from "./views/Settings";
 import HomeView from "./views/Home";
-import DefaultForm from "./views/Forms/ProfileDefForm";
+import DefaultForm from "./views/Forms/index";
 
 import { useSelector } from "react-redux";
 

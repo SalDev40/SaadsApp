@@ -1,4 +1,5 @@
 import React from "react";
+import path from "path";
 import { render } from "react-dom";
 import Root from "./Root";
 import { configureStore, history } from "./redux/store/configureStore.js";
@@ -14,17 +15,17 @@ const store = configureStore();
 
 //handle holds access to talk to child process
 
-let child = spawn("/home/salmanhoosein/Desktop/electron-react-template/consoleApp/bin/Debug/net5.0/consoleApp");
+let child = spawn(path.join(__dirname, "../consoleApp/bin/Debug/net5.0/consoleApp"));
 child.stdin.setDefaultEncoding("utf8");
 child.stdout.setEncoding("utf8");
 child.stderr.setEncoding("utf8");
 console.log(child);
 
-setTimeout(() => {
-  child.stdin.write(
-    "hello from electron react"
-  )
-}, 500);
+// setTimeout(() => {
+//   child.stdin.write(
+//     "hello from electron react"
+//   )
+// }, 500);
 
 //update the IPC handle in redux
 store.dispatch(saveIpcHandle(child));

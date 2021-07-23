@@ -42,7 +42,7 @@ const navConfig = [
   },
   {
     title: "Form",
-    icon: Users,
+    icon: AccountsIcon,
     href: "/app/form",
   },
   {

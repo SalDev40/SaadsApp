@@ -19,16 +19,12 @@ namespace consoleApp
 
                     Buffer.BlockCopy(buffer, 0, payload, 0, length);
 
+                    Console.Write("C# Console APP in background");
                     Console.Write("C# Receiving: " + Encoding.UTF8.GetString(payload));
                     Console.Out.Flush();
                 }
             }
 
-            // while (true)
-            // {
-            //     Console.WriteLine("hello from c#");
-            //     Thread.Sleep(5000);
-            // }
         }
     }
 }

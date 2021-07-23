@@ -6,6 +6,7 @@ import {
   TextField,
   Box,
   Grid,
+  Button,
   makeStyles,
   FormControlLabel,
   Typography,
@@ -38,7 +39,7 @@ function DefaultForm() {
           label="resourceGroup"
           fullWidth
           onChange={(event) => {
-            props.setResourceGroup(event.target.value);
+            setResourceGroup(event.target.value);
           }}
           InputLabelProps={{
             shrink: true,
@@ -51,7 +52,7 @@ function DefaultForm() {
           label="subscriptionName"
           fullWidth
           onChange={(event) => {
-            props.setSubscriptionName(event.target.value);
+            setSubscriptionName(event.target.value);
           }}
           InputLabelProps={{
             shrink: true,
