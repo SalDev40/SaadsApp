@@ -47,10 +47,10 @@ const createWindow = async () => {
   mainWindow = new BrowserWindow({
     show: false,
     width: 1100,
-    height: 730,
-    minHeight: 730,
-    minWidth: 950,
-    title: "Azure Migration",
+    height: 800,
+    minHeight: 800,
+    minWidth: 1100,
+    title: "Ticket Tool",
     webPreferences: {
       nodeIntegration: true,
     },
@@ -75,7 +75,6 @@ const createWindow = async () => {
   });
 
   mainWindow.on("closed", () => {
-    console.log("closing bot........");
     mainWindow = null;
   });
 };
@@ -90,8 +89,6 @@ app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
   }
-  let path = app.getPath("userData") + "/savedData";
-  // fs.writeFileSync(path, JSON.stringify(reduxStore.default.getState()));
 });
 
 app.on("ready", createWindow);

@@ -1,11 +1,11 @@
 {
-  "name": "azure-migration",
-  "productName": "azure migration tool",
+  "name": "ticket-form",
+  "productName": "ticket form tool",
   "version": "1.0.0",
-  "description": "Azure Migration Tool",
+  "description": "ticket form Tool",
   "main": "./main.prod.js",
   "author": {
-    "name": "Azure Migration",
+    "name": "ticket form",
     "email": "test@gmail.com"
   },
   "scripts": {

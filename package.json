@@ -1,8 +1,8 @@
 {
-  "name": "azure-migration",
-  "productName": "Azure Migration",
+  "name": "ticket-form",
+  "productName": "ticket form tool",
   "version": "1.0.0",
-  "description": "Migration tool",
+  "description": "ticket form tool",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.renderer.dev.dll.babel.js --colors",
@@ -28,8 +28,8 @@
     "start-renderer-dev": "cross-env NODE_ENV=development webpack-dev-server --config configs/webpack.config.renderer.dev.babel.js"
   },
   "build": {
-    "productName": "Azure Migration",
-    "appId": "org.develar.AzureMigration",
+    "productName": "Ticket Form",
+    "appId": "org.develar.ticketformtool",
     "files": [
       "dist/",
       "node_modules/",
@@ -232,6 +232,7 @@
     "async-mutex": "^0.2.6",
     "axios": "^0.19.2",
     "axios-mock-adapter": "^1.17.0",
+    "caniuse-lite": "^1.0.30001265",
     "change-case": "^4.1.1",
     "chart.js": "^2.9.3",
     "chartist": "^0.11.4",
@@ -271,6 +272,7 @@
     "react-big-calendar": "^0.24.1",
     "react-chartist": "^0.14.3",
     "react-chartjs-2": "^2.9.0",
+    "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^16.12.0",
     "react-draft-wysiwyg": "^1.14.4",
     "react-draggable": "^4.4.3",

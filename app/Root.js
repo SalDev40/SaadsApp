@@ -1,23 +1,7 @@
-import _ from "lodash";
 import React from "react";
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import { create } from "jss";
-import rtl from "jss-rtl";
-import MomentUtils from "@date-io/moment";
-import { SnackbarProvider } from "notistack";
-import {
-  createStyles,
-  jssPreset,
-  makeStyles,
-  StylesProvider,
-  ThemeProvider,
-  createMuiTheme,
-} from "@material-ui/core";
-import { hot } from "react-hot-loader/root";
-
-import { themeConfigs, baseConfig } from "./theme";
-import { useSelector } from "react-redux";
+import { createStyles, makeStyles } from "@material-ui/core";
 import Routes from "./Routes";
 
 const history = createBrowserHistory();
@@ -47,29 +31,14 @@ const useStyles = makeStyles(() =>
   })
 );
 
-function Root() {
+function App() {
   useStyles();
 
-  const reduxSettings = useSelector((state) => state.settings);
-
-  let themeConfig = themeConfigs.find(
-    (theme) => theme.name === reduxSettings.theme
-  );
-  console.log(themeConfig);
-  if (!themeConfig) {
-    console.warn(new Error(`The theme ${reduxSettings.theme} is not valid`));
-    [themeConfig] = themeConfigs;
-  }
-
-  let theme = createMuiTheme(_.merge({}, baseConfig, themeConfig));
-
   return (
-    <ThemeProvider theme={theme}>
-      <Router history={history}>
-        <Routes />
-      </Router>
-    </ThemeProvider>
+    <Router history={history}>
+      <Routes />
+    </Router>
   );
 }
 
-export default hot(Root);
+export default App;
